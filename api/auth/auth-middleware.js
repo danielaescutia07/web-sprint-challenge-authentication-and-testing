@@ -1,9 +1,9 @@
 const User = require('./auth-user-model');
 
-const checkUserExists = async (req, res, next) {
+const checkUserExists = async (req, res, next) => {
     try {
         const [user] = await User.findBy({ username: req.body.username})
-        if (!user) {
+        if (user) {
             next({ status: 422, message: 'username taken'})
         } else {
             next()
