@@ -1,4 +1,8 @@
 const router = require('express').Router();
+const { JWT_SECRET } = require('../secrets/index');
+
+const User = require('./auth-user-model');
+
 
 router.post('/register', (req, res) => {
   res.end('implement register, please!');
