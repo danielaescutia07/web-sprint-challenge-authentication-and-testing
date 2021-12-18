@@ -20,18 +20,18 @@ afterAll( async () => {
   await db.destroy()
 });
 
-describe('[GET] /jokes', () => {
-  let res
-  beforeEach(async () => {
-    res = await request(server).get('/api/jokes')
-  })
-  it('responds with 200 ok', async () => {
-    expect(res.status).toBe(200)
-  })
-  it('responds with all jokes', async () => {
-    expect(res.body).toHaveLength(3)
-  })
-})
+// describe('[GET] /jokes', () => {
+//   let res
+//   beforeEach(async () => {
+//     res = await request(server).get('/api/jokes')
+//   })
+//   it('responds with 200 ok', async () => {
+//     expect(res.status).toBe(200)
+//   })
+//   it('responds with all jokes', async () => {
+//     expect(res.body).toHaveLength(3)
+//   })
+// })
 
 describe('[POST] /register', () => {
   it('adds user to database', async () => {
